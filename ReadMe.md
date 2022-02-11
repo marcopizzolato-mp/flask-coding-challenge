@@ -1,5 +1,7 @@
 ## Serving geospatial metadata
 
+![S2 image](asset.png)
+
 In this scenario, we have a client who isn't experienced with geospatial data, but understands some basic concepts, such as resolution of imagery.
 
 As a PoC, we are tasked with demonstrating a simple way of interacting with a remotely sensed image - in this case a single image in data/sample.tif.
