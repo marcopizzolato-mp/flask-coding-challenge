@@ -1,0 +1,16 @@
+{% extends "layout_upload.html" %}
+{% block title %}
+Raster Home
+{% endblock %}
+{% block content %}
+<h1>Raster Uploaded</h1>
+</br>
+<p>Success! The file has been uploaded correctly.</p>
+{%if file %}
+<strong>The name of the uploaded file is: {{ file }}!</strong>
+{% else %}
+<p>Filename not available</p>
+{% endif %}
+<p>Please visit the Metadata and Thumbnail pages using the navigation bar to have more information on the uploaded
+    raster. Alternatively, you can load a new raster on the New Upload page. </p>
+{% endblock %}
