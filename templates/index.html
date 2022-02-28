@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}
+Raster Home
+{% endblock %}
+{% block content %}
+<h1>Raster Upload</h1>
+<p>Please select the Raster in geoTiff format you want to analyse.</p>
+<p>For the scope of this exercise we are looking only at single band Rasters.</p>
+<form method="POST" action="" enctype="multipart/form-data">
+    <p><input type="file" name="file" accept=".tif,.tiff"></p>
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
