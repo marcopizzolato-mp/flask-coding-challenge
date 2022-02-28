@@ -1,0 +1,11 @@
+{% extends "layout_upload.html" %}
+{% block title %}
+Thumbnail
+{% endblock %}
+{% block content %}
+{%if plot_url != None %}
+<img src="data:image/png;base64, {{ plot_url }}">
+{% else %}
+Image not found....
+{% endif %}
+{% endblock %}
