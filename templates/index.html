@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
 {% block title %}
-Raster Home
+Home
 {% endblock %}
 {% block content %}
-<h1>Raster Upload</h1>
-<p>Please select the Raster in geoTiff format you want to analyse.</p>
-<p>For the scope of this exercise we are looking only at single band Rasters.</p>
+<h2>Raster Upload</h2>
+<p>This tool is designed to allow a simple interaction between the user and a remotely sensed image.</p>
+The tool provides some information on the uploaded file as well as a thumbnail of the asset, and relevant metadata <br>
+such as coordinate system, bounding box, statistics, etc.</p>
+<p>Please select the Raster using the <b>Choose File</b> button, and upload it with the button <b>Submit</b>, once
+    you do so <br> you will be redirected to a new page.</p>
+<p><b>Note:</b> for the scope of this exercise we are looking only at single band Rasters in .tif format.</p>
+</br>
 <form method="POST" action="" enctype="multipart/form-data">
     <p><input type="file" name="file" accept=".tif,.tiff"></p>
     <p><input type="submit" value="Submit"></p>
