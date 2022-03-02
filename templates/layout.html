@@ -8,17 +8,21 @@
 </head>
 
 <body>
+    <div class="col-md-4">
+        <img class="logo" src="{{logo_image}}" alt="Logo image">
+    </div>
     <div class="navbar">
         <a href="{{ url_for('index') }}" class="navbar-brand">New Upload</a>
     </div>
-
     <div class="body-content">
         {% block content %}
         {% endblock %}
-        <footer>
-            <p>Coding Challenge February 2022</p>
-        </footer>
+        </br>
     </div>
+    <hr>
+    <footer>
+        <p>{{footer_text}}</p>
+    </footer>
 </body>
 
 </html>
