@@ -1,16 +1,32 @@
 {% extends "layout_upload.html" %}
 {% block title %}
-Raster Home
+Info
 {% endblock %}
 {% block content %}
-<h1>Raster Uploaded</h1>
-</br>
-<p>Success! The file has been uploaded correctly.</p>
+<h2>Raster Uploaded</h2>
+<p>Success! The raster file has been correctly uploaded.</p>
+<p>Visit the <b>“Metadata”</b> page to view the raster metadata or the <b>“Thumbnail”</b> page to view an image of the
+    raster. <br>If you wish to upload a new raster please do so
+    using page <b>“New Upload”</b> page.</p>
+
 {%if file %}
-<strong>The name of the uploaded file is: {{ file }}!</strong>
+<li>
+    The name of the uploaded raster is: <strong>{{ file }}</strong>
+</li>
 {% else %}
-<p>Filename not available</p>
+<li>
+    File name not available
+</li>
 {% endif %}
-<p>Please visit the Metadata and Thumbnail pages using the navigation bar to have more information on the uploaded
-    raster. Alternatively, you can load a new raster on the New Upload page. </p>
+{%if size_mb != None %}
+<li>
+    The file size of the uploaded raster is: <strong>{{ size_mb }} Megabytes</strong>
+</li>
+{% else %}
+<li>
+    File size not available
+</li>
+{% endif %}
+</br>
+</br>
 {% endblock %}
