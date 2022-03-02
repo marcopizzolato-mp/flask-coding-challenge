@@ -8,20 +8,24 @@
 </head>
 
 <body>
+    <div class="col-md-4">
+        <img class="logo" src="{{logo_image}}" alt="Logo image">
+    </div>
     <div class="navbar">
         <a href="{{ url_for('index') }}" class="navbar-brand">New Upload</a>
-        <a href="{{ url_for('metadata') }}" class="navbar-item">Metadata</a>
-        <a href="{{ url_for('thumbnail') }}" class="navbar-item">Thumbnail</a>
+        <a href="{{ url_for('index_upload') }}" class="navbar-brand">FileInfo</a>
+        <a href="{{ url_for('metadata') }}" class="navbar-brand">Metadata</a>
+        <a href="{{ url_for('thumbnail') }}" class="navbar-brand">Thumbnail</a>
     </div>
-
     <div class="body-content">
         {% block content %}
         {% endblock %}
-        <hr />
-        <footer>
-            <p>Coding Challenge February 2022</p>
-        </footer>
+        </br>
     </div>
+    <hr>
+    <footer>
+        <p>{{footer_text}}</p>
+    </footer>
 </body>
 
 </html>
