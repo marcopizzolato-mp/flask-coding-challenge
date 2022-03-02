@@ -1,9 +1,9 @@
 .navbar {
-    background-color: lightslategray;
+    background-color: rgb(252,188,4);
     font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:  'Lucida Sans Unicode','Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
-    padding: 8px 5px 8px 5px;
+    padding: 10px 7px 10px 7px;
 }
 
 .navbar a {
@@ -12,8 +12,9 @@
 }
 
 .navbar-brand {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
+    margin-left: 30px;
 }
 
 .navbar-item {
@@ -24,4 +25,43 @@
 .body-content {
     padding: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+table{
+    border: 1.2px solid #FFC000;
+    border-collapse: collapse;
+}
+
+td.header {
+  border: 1.2px solid #FFC000;
+  background: #FFC000;
+  color: white;
+  font-weight: bold;
+  padding: 2pt 6pt 2pt 6pt;
+}
+td.normal {
+  border: 1.2px solid #FFC000;
+  background:  #FFF2CC;
+  padding: 2pt 6pt 2pt 6pt;
+}
+img.logo {
+  width: 250px;
+  height: auto;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+img.thumb {
+  width: 700px;
+  height: auto;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+}
+
+footer{
+    color: grey;
+    padding-left: 5px;
 }
