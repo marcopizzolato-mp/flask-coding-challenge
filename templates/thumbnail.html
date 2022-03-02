@@ -4,7 +4,23 @@ Thumbnail
 {% endblock %}
 {% block content %}
 {%if plot_url != None %}
-<img src="data:image/png;base64, {{ plot_url }}">
+<div class="col-lg-8">
+    <h2>Raster Thumbnail</h2>
+    <p> The figure below represents a thumbnail image of the uploaded raster.</p>
+    <p>
+        If you wish to upload a new raster please do so using page <b>“New Upload”</b> page available through the
+        navigation
+        bar
+        on top of the page, <br> or visit the <b>“Metadata”</b> page to view the raster metadata. The information about
+        the
+        uploaded file
+        are available in the <b>“FileInfo”</b> page.
+    </p>
+</div>
+
+<div>
+    <img class="thumb" src="data:image/png;base64, {{ plot_url }}" alt="Raster Thumbnail">
+</div>
 {% else %}
 Image not found....
 {% endif %}
