@@ -3,20 +3,18 @@ from os.path import exists
 from pathlib import Path
 
 
-def readraster(file_path):
+def read_raster(file_path):
     """Takes as input a file path to a geoTif image, opens it using Rasterio and returns a Raster object
-
     Args:
     file_path (Path): path to the geoTif image
-
     Raises:
         Exception: raise an error if the parameter is not a Path
         Exception: raise an error if the file does not exists
         Exception: raise an error if the file extension is not correct
-
     Returns:
         raster_object (Raster): object of the Class Raster
      """
+    
     # Raise an error if the parameter is not a Path
     if not isinstance(file_path, (str, Path)):
         raise Exception("Sorry, the path selected is not valid")
@@ -36,25 +34,23 @@ def readraster(file_path):
     return raster_object
 
 
-def rastermetadata(raster_object):
+def raster_metadata(raster_object):
     """Takes as input an object of the Class Raster and returns a dictionary with the Raster metadata
-
     Args:
     raster_object (Raster): object of the Class Raster
-
     Raises:
         Exception: raise an error if the parameter is not of the Class Raster
-
     Returns:
         dict_metadata (dict): dictionary object
      """
+
     if not isinstance(raster_object, Raster):
         raise Exception(
             "Sorry, the input is not an instance of the Class Raster")
-    raster_array = raster_object.getArray
-    dict_metadata = {'band': str(raster_object.getCount), 'width': str(raster_object.getWidth),
-                     'height': str(raster_object.getHeight), 'crs': str(raster_object.getCRS),
-                     'bounds': str(raster_object.getBounds), 'driver': str(raster_object.getDriver),
+    raster_array = raster_object.get_array
+    dict_metadata = {'band': str(raster_object.get_count), 'width': str(raster_object.get_width),
+                     'height': str(raster_object.get_height), 'crs': str(raster_object.get_crs),
+                     'bounds': str(raster_object.get_bounds), 'driver': str(raster_object.get_driver),
                      'min': str(round(raster_array.min(), 2)), 'max': str(round(raster_array.max(), 2)),
                      'mean': str(round(raster_array.mean(), 2)), 'std': str(round(raster_array.std(), 2))}
 
@@ -63,7 +59,6 @@ def rastermetadata(raster_object):
 
 class Raster(object):
     """Creates a Raster object
-
     Args:
     opened_object (rasterio.io.DatasetReader): opened dataset object
      """
@@ -78,11 +73,11 @@ class Raster(object):
         self._driver = opened_object.driver
 
     @property
-    def getArray(self):
+    def get_array(self):
         return self._array
 
     @property
-    def getCRS(self):
+    def get_crs(self):
         if self._crs == None:
             string_out = "not set or not available"
         else:
@@ -90,7 +85,7 @@ class Raster(object):
         return string_out
 
     @property
-    def getWidth(self):
+    def get_width(self):
         if self._width == None:
             string_out = "not set or not available"
         else:
@@ -98,7 +93,7 @@ class Raster(object):
         return string_out
 
     @property
-    def getHeight(self):
+    def get_height(self):
         if self._height == None:
             string_out = "not set or not available"
         else:
@@ -106,7 +101,7 @@ class Raster(object):
         return string_out
 
     @property
-    def getCount(self):
+    def get_count(self):
         if self._count == None:
             string_out = "not set or not available"
         else:
@@ -114,7 +109,7 @@ class Raster(object):
         return string_out
 
     @property
-    def getBounds(self):
+    def get_bounds(self):
         if self._bounds == None:
             string_out = "not set or not available"
         else:
@@ -122,7 +117,7 @@ class Raster(object):
         return string_out
 
     @property
-    def getDriver(self):
+    def get_driver(self):
         if self._driver == None:
             string_out = "not set or not available"
         else:
