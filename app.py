@@ -18,8 +18,8 @@ app = Flask(__name__)
 # Parameters
 app.config['UPLOAD_EXTENSIONS'] = ['.tiff', '.tif']
 app.config['UPLOAD_PATH'] = 'data'
-app.config['IMAGE_PATH'] = os.path.join('static', 'images', 'asset.jpg')
-app.config['FOOTER_TEXT'] = 'Coding Challenge SatelliteVU 2022'
+app.config['IMAGE_PATH'] = os.path.join('static', 'images', 'logo_terra_transp.png')
+app.config['FOOTER_TEXT'] = "Bird's eye viewer v1.0 - Marco Pizzolato 2022"
 
 # Set a secret key for the session
 secret = secrets.token_urlsafe(32)
