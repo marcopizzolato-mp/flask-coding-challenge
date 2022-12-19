@@ -4,13 +4,17 @@ Home
 {% endblock %}
 {% block content %}
 <h2>Raster Upload</h2>
-<p>This tool is designed to allow a simple interaction between the user and a remotely sensed image.</p>
-The tool provides some information on the uploaded file as well as a thumbnail of the asset, and relevant metadata <br>
-such as coordinate system, bounding box, statistics, etc.</p>
-<p>Please select the Raster using the <b>Choose File</b> button, and upload it with the button <b>Submit</b>, once
-    you do so <br> you will be redirected to a new page.</p>
-<p><b>Note:</b> for the scope of this exercise we are looking only at single band Rasters in .tif format.</p>
-</br>
+<p>This an exploratory tool, that allows the user to inspect a remotely sensed (raster) image with few simple clicks.</p>
+The user can upload a raster image of choice, with the tool returning both the raster metadata information, <br>
+(such as coordinate system, bounding box, statistics, etc.) and a raster thumbnail image.</p>
+<p><b>Instructions:</b></p>
+<p>1. Select the raster in .tif format using the <b>Choose File</b> button</p>
+<p>2. Upload the raster with the button <b>Submit</b></p>
+<p>3. The tool will redirect automatically to a new page <b>File Info</b></p>
+<p>4. Two new pages <b>Metadata</b> and <b>Thumbnail</b> will be also made available to the user
+<p><b>Note:</b></p>
+In this current version (v1.0) the tool can only analyse single band rasters in .tif format.</p>
+
 <form method="POST" action="" enctype="multipart/form-data">
     <p><input type="file" name="file" accept=".tif,.tiff"></p>
     <p><input type="submit" value="Submit"></p>
