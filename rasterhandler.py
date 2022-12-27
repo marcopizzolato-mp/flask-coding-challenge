@@ -9,12 +9,12 @@ def read_raster(file_path):
     file_path (Path): path to the geoTif image
     Raises:
         Exception: raise an error if the parameter is not a Path
-        Exception: raise an error if the file does not exists
+        Exception: raise an error if the file does not exist
         Exception: raise an error if the file extension is not correct
     Returns:
         raster_object (Raster): object of the Class Raster
      """
-    
+
     # Raise an error if the parameter is not a Path
     if not isinstance(file_path, (str, Path)):
         raise Exception("Sorry, the path selected is not valid")
@@ -24,7 +24,7 @@ def read_raster(file_path):
     # Raise an error if the file extension is not correct
     elif not file_path.lower().endswith(('.tif', '.tiff')):
         raise Exception(
-            "Sorry, the file selected is not in .tif format, please provide a .tif of .tiff raster file")
+            "Sorry, the file selected is not in .tif format, please provide a .tif raster file")
     else:
         # Load raster as a opened dataset object
         rio_object = rasterio.open(file_path)
