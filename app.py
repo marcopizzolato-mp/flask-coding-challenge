@@ -64,6 +64,7 @@ def upload_file():
         file_bytes = os.path.getsize(raster_file_path)
         raster_object = read_raster(raster_file_path)
         dict_metadata = raster_metadata(raster_object)
+
         session.clear()
         # Set variables
         session['filesize'] = str(round(file_bytes / (1024 * 1024), 3))
@@ -92,7 +93,7 @@ def index_upload():
 
 @app.route("/thumbnail")
 def thumbnail():
-    """Page with metadata information of the uploaded file"""
+    """Page with thumbnail image of the uploaded file"""
     # Retrieve variables
     raster_file_path = session.get('filepath', None)
     # Execute function
@@ -120,7 +121,7 @@ def thumbnail():
 
 @app.route("/metadata")
 def metadata():
-    """Page with thumbnail image of the uploaded file"""
+    """Page with metadata information of the uploaded file"""
     # Retrieve variables
     metadata = session.get('metadata', None)
     image = app.config['IMAGE_PATH']
