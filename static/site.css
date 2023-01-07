@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(252,188,4);
+    background-color: rgb(106,159,108);
     font-size: 1em;
     font-family:  'Lucida Sans Unicode','Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
@@ -27,24 +27,24 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 table{
-    border: 1.2px solid #FFC000;
+    border: 1.2px solid #7aa97c;
     border-collapse: collapse;
 }
 
 td.header {
-  border: 1.2px solid #FFC000;
-  background: #FFC000;
-  color: white;
+  border: 1.2px solid #7aa97c;
+  background: white;
+  color: #6a9f6c;
   font-weight: bold;
   padding: 2pt 6pt 2pt 6pt;
 }
 td.normal {
-  border: 1.2px solid #FFC000;
-  background:  #FFF2CC;
+  border: 1.2px solid #7aa97c;
+  background:  white;
   padding: 2pt 6pt 2pt 6pt;
 }
 img.logo {
-  width: 250px;
+  width: 450px;
   height: auto;
   padding-right: 0px;
   padding-top: 3px;

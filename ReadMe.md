@@ -1,16 +1,45 @@
-## Serving geospatial metadata
+# <img src=".\static\images\logo_terra_transp.png" alt="logo_terra" width="360"/> <br> Raster exploration with Python and Flask
 
-![S2 image](asset.png)
+## Project Description
 
-In this scenario, we have a client who isn't experienced with geospatial data, but understands some basic concepts, such as resolution of imagery.
+The aim of this project and the **Bird's Eye Viewer** web app, built using **Python** and **Flask**, is to create an
+interactive tool that allows users to explore remotely sensed (raster) images with few simple clicks, without the need
+of using specific GIS software.  
+This tool is intended for both users that do not have a remote sensing background but also for experienced geospatial
+ones, that need a quick overview of raster properties.
 
-As a PoC, we are tasked with demonstrating a simple way of interacting with a remotely sensed image - in this case a single image in data/sample.tif.
+## Installation
 
-The product owner has requested two explicit endpoints be developed for the customer to interact with this asset:
+This project is not available live through the internet, but can be easily run locally, creating a virtual python
+environment. The _requirements.txt_ file contains information on the necessary libraries to run the Web App.
 
-1. Display an in-browser thumbnail of the asset at data/sample.tif when at the /thumbnail address.
-2. Retrieve relevant metadata (resolution, coordinate system, bounding box, statistics) about the asset at the /metadata address
+### Libraries
 
-Our team has identified flask as a good start for this PoC, but also considered FastAPI and/or Starlette as possible frameworks to implement the functionality, should you wish to choose one of those.
+<br>
 
-The scope of this work is limited to the single asset within this project, but should and could be generalizable to any asset available through a http connection.
+> flask~=2.2.2  
+> matplotlib~=3.6.2  
+> numpy~=1.23.5  
+> Werkzeug~=2.2.2  
+> rasterio~=1.3.4
+
+<br>
+
+## Web App user interface
+
+For a detailed description on how to use the **Bird's Eye Viewer** web app as well as more information on the code
+structure and testing, please refer to the following the [dedicated article](https://www.marcopizzolato.com/posts/python-flask/) in my personal [Portfolio website](https://www.marcopizzolato.com/).
+
+## Limitations
+
+In this current version (v1.0), the tool can only analyse single band rasters in .tif format. Future version will expand
+the tool to take as inputs raster different from .tif and with multiple bands, such as netCDF. 
+
+
+
+
+
+
+
+
+

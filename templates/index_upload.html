@@ -5,13 +5,14 @@ Info
 {% block content %}
 <h2>Raster Uploaded</h2>
 <p>Success! The raster file has been correctly uploaded.</p>
-<p>Visit the <b>“Metadata”</b> page to view the raster metadata or the <b>“Thumbnail”</b> page to view an image of the
-    raster. <br>If you wish to upload a new raster please do so
-    using page <b>“New Upload”</b> page.</p>
+<p>Visit the <b>Metadata</b> page to view the raster metadata or the <b>Thumbnail</b> page to view a thumbnail image of the
+    raster. <br>If you wish to upload a new raster please do so using page <b>New Upload</b> page available through the
+        navigation bar.</p>
 
 {%if file %}
+<p><b>File information:</b></p>
 <li>
-    The name of the uploaded raster is: <strong>{{ file }}</strong>
+    File name: <strong>{{ file }}</strong>
 </li>
 {% else %}
 <li>
@@ -20,7 +21,7 @@ Info
 {% endif %}
 {%if size_mb != None %}
 <li>
-    The file size of the uploaded raster is: <strong>{{ size_mb }} Megabytes</strong>
+    File size: <strong>{{ size_mb }} Megabytes</strong>
 </li>
 {% else %}
 <li>

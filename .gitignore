@@ -1,3 +1,9 @@
 
 /jupyter
 __pycache__/
+/.idea
+/.ipynb_checkpoints
+/.pytest_cache
+/.vscode
+/archive
+NOTES.txt
